@@ -2,7 +2,6 @@ package kasm
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"net/http"
 	"strings"
