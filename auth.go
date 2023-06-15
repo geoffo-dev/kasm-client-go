@@ -18,6 +18,7 @@ func (c *Client) Authenticate() (*AuthResponse, error) {
 	}
 
 	req, err := http.NewRequest("POST", fmt.Sprintf("%s/api/authenticate", c.HostURL), strings.NewReader(string(rb)))
+	req.Header.Set("Content-Type", "application/json")
 	if err != nil {
 		return nil, err
 	}
