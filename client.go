@@ -52,7 +52,7 @@ func NewClient(host, username, password *string) (*Client, error) {
 		Password: *password,
 	}
 
-	ar, err := c.SignIn()
+	ar, err := c.Authenticate()
 	if err != nil {
 		return nil, err
 	}
