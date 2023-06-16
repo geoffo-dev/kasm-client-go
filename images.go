@@ -8,7 +8,7 @@ import (
 )
 
 // GetImages - Returns list of coffees
-func (c *Client) GetImages() ([]Image, authToken *string, error) {
+func (c *Client) GetImages(authToken *string) ([]Image, error) {
 	req, err := http.NewRequest("POST", fmt.Sprintf("%s/api/public/get_images", c.HostURL), nil)
 	if err != nil {
 		return nil, err
