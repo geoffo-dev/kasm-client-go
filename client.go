@@ -26,8 +26,8 @@ type AuthStruct struct {
 
 // AuthResponse -
 type AuthResponse struct {
-	UserID   string `json:"user_id`
-	Token    string `json:"token"`
+	UserID string `json:"user_id`
+	Token  string `json:"token"`
 }
 
 // NewClient -

@@ -35,4 +35,3 @@ func (c *Client) Authenticate() (*AuthResponse, error) {
 
 	return &ar, nil
 }
-
