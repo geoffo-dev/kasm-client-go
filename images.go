@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"strings"
 )
 
 // GetImages - Returns list of coffees
@@ -45,18 +44,17 @@ func (c *Client) GetImages(authToken *string) ([]Image, error) {
 // 		return nil, err
 // 	}
 
-// 	newCoffee := Coffee{}
-// 	err = json.Unmarshal(body, &newCoffee)
+// 	newImage := Image{}
+// 	err = json.Unmarshal(body, &newImage)
 // 	if err != nil {
 // 		return nil, err
 // 	}
 
-// 	return &newCoffee, nil
+// 	return &newImage, nil
 // }
 
-
-// // GetCoffee - Returns specific coffee (no auth required)
-// func (c *Client) GetCoffee(coffeeID string) ([]Coffee, error) {
+// // GetImage - Returns specific Image (no auth required)
+// func (c *Client) GetImage(coffeeID string) ([]Image, error) {
 // 	req, err := http.NewRequest("GET", fmt.Sprintf("%s/coffees/%s", c.HostURL, coffeeID), nil)
 // 	if err != nil {
 // 		return nil, err
@@ -67,7 +65,7 @@ func (c *Client) GetImages(authToken *string) ([]Image, error) {
 // 		return nil, err
 // 	}
 
-// 	coffees := []Coffee{}
+// 	coffees := []Image{}
 // 	err = json.Unmarshal(body, &coffees)
 // 	if err != nil {
 // 		return nil, err
@@ -76,8 +74,8 @@ func (c *Client) GetImages(authToken *string) ([]Image, error) {
 // 	return coffees, nil
 // }
 
-// // GetCoffeeIngredients - Returns list of coffee ingredients (no auth required)
-// func (c *Client) GetCoffeeIngredients(coffeeID string) ([]Ingredient, error) {
+// // GetImageIngredients - Returns list of coffee ingredients (no auth required)
+// func (c *Client) GetImageIngredients(coffeeID string) ([]Ingredient, error) {
 // 	req, err := http.NewRequest("GET", fmt.Sprintf("%s/coffees/%s/ingredients", c.HostURL, coffeeID), nil)
 // 	if err != nil {
 // 		return nil, err
